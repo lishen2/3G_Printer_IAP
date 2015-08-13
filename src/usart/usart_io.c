@@ -15,8 +15,8 @@
 #define USARTIO_USART1_IRQ        USART1_IRQn
 
 /* 串口1 */
-#define USART_U1_IO_READBUF_SIZE  32 
-#define USART_U1_IO_WRITEBUF_SIZE 512
+#define USART_U1_IO_READBUF_SIZE  8 
+#define USART_U1_IO_WRITEBUF_SIZE 64
 
 
 /* 串口1使用的读写缓冲区 */

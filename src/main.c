@@ -24,16 +24,8 @@ int main()
 		printf("update success\n");
 
 		LED_LightUp();
-		delay_ms(1000);
-		LED_Shutdown();
-		delay_ms(500);
-		LED_LightUp();
-		delay_ms(1000);
-		LED_Shutdown();
-		delay_ms(500);
-		LED_LightUp();
-		delay_ms(1000);
-		LED_Shutdown();				
+		delay_ms(3000);
+		LED_Shutdown();			
 	} 
 
 	/* 引导应用程序 */

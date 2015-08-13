@@ -1,11 +1,15 @@
 #ifndef _ONCHIP_FLASH_H_
 #define _ONCHIP_FLASH_H_
 
-/* 从片内flash中读取数据 */
-int FLASH_Read(void* buf, int bufsize);
+#if defined (STM32F10X_HD) || defined (STM32F10X_HD_VL) || defined (STM32F10X_CL) || defined (STM32F10X_XL)
+  #define FLASH_PAGE_SIZE    ((uint16_t)0x800)
+#else
+  #define FLASH_PAGE_SIZE    ((uint16_t)0x400)
+#endif
 
 /* 将配置写入片内flash */
-int FLASH_Write(void* buf, int bufsize);
+int FLASH_Write(u32 addr, void* buf, int size);
+int FLASH_Erase(u32 addr, u32 size);
 
 #endif
 

@@ -333,7 +333,7 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>0</OneElfS>
+            <OneElfS>1</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -416,24 +416,9 @@
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f10x_rcc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_usart.c</FileName>
@@ -444,6 +429,16 @@
               <FileName>stm32f10x_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -481,16 +476,6 @@
           <GroupName>storage</GroupName>
           <Files>
             <File>
-              <FileName>conf_parser.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\storage\conf_parser.c</FilePath>
-            </File>
-            <File>
-              <FileName>config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\storage\config.c</FilePath>
-            </File>
-            <File>
               <FileName>ff.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\storage\ff.c</FilePath>
@@ -519,6 +504,11 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\misc\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>update.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\misc\update.c</FilePath>
             </File>
           </Files>
         </Group>
