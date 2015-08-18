@@ -5,10 +5,15 @@
 #include "usart_io.h"
 #include "led.h"
 #include "update.h"
+#include "platform.h"
+
+typedef void *(*EntryPoint)(void);
 
 int main()
 {
 	int ret;
+	u32 addr;
+	EntryPoint ep;
 
 	/* 硬件初始化 */
 	HW_CommonInit();
@@ -26,10 +31,12 @@ int main()
 		LED_LightUp();
 		delay_ms(3000);
 		LED_Shutdown();			
-	} 
+	}
 
 	/* 引导应用程序 */
-    printf("Boot Programme\n");
+	addr = 	*((u32*)PLATFORM_FLASH_PROGRAME_START);
+	ep = (EntryPoint)(addr | 0x01);
+	ep();
 
 	return 0;
 }

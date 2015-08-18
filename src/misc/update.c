@@ -32,7 +32,7 @@ int _openAndUpdate(void)
 
 	/* ²Á³ýÆ¬ÄÚflash */
 	ret = FLASH_Erase(PLATFORM_FLASH_PROGRAME_START, f_size(&g_updateFile));
-	if (FLASH_COMPLETE != ret){
+	if (ERROR_SUCCESS != ret){
 		return ERROR_FAILED;
 	}
 

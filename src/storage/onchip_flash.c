@@ -29,6 +29,7 @@ int FLASH_Write(u32 addr, void* buf, int size)
 		status = FLASH_ProgramWord(addr + i * 4, *(u32*)(dest_addr	+ i * 4));
 		if (FLASH_COMPLETE != status){
 			ret = ERROR_FAILED;
+			break;
 		}
 	}
 
@@ -52,6 +53,7 @@ int FLASH_Erase(u32 addr, u32 size)
 		status = FLASH_ErasePage(addr + i * FLASH_PAGE_SIZE);
 		if (FLASH_COMPLETE != status){
 			ret = ERROR_FAILED;
+			break;
 		}
 	}
 

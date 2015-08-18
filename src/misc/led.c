@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 #include "led.h"
 
-#define LED_MCUSTATUS_PIN   GPIO_Pin_3
+#define LED_MCUSTATUS_PIN   GPIO_Pin_11
 #define LED_MCUSTATUS_PORT  GPIOA 
 #define LED_MCUSTATUS_CLOCK RCC_APB2Periph_GPIOA
 
